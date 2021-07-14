@@ -69,29 +69,7 @@ public class DbController {
 
     }
 
-//    @RequestMapping("/user/{id}")
-//    public Map<String,Object> getUser(@PathVariable String id){
-//        Map<String,Object> map = null;
-//
-//        List<Map<String, Object>> list = getDbType();
-//
-//        for (Map<String, Object> dbmap : list) {
-//
-//            Set<String> set = dbmap.keySet();
-//
-//            for (String key : set) {
-//                if(key.equals("id")){
-//                    if(dbmap.get(key).equals(id)){
-//                        map = dbmap;
-//                    }
-//                }
-//            }
-//        }
-//
-//        if(map==null)
-//            map = list.get(0);
-//        return map;
-//    }
+
 
 }
 
