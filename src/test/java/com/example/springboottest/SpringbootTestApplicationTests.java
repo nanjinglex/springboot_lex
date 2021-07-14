@@ -2,6 +2,7 @@ package com.example.springboottest;
 
 import com.example.springboottest.dao.MongoTestDao;
 import com.example.springboottest.pojo.MongoTest;
+import com.example.springboottest.service.UserService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -16,7 +17,7 @@ class SpringbootTestApplicationTests {
     private UserService userService;
 
     @Autowired
-    private com.example.springboottest.dao.MongoTestDao mongoTestDao;
+    private MongoTestDao mongoTestDao;
 
 
     @Test
