@@ -37,9 +37,7 @@ class SpringbootTestApplicationTests {
 
     @Test
     public void selectAll() {
-//        userService.selectAll();
         System.out.println(userService.selectAll());
-//        System.out.println("22212");
         System.out.println(userService.selectByCondition());
     }
 
