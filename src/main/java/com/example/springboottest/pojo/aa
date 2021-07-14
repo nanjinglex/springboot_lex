@@ -1,0 +1,23 @@
+{
+  "success": true,
+  "errorCode": 0,
+  "errorMsg": null,
+  "model": [
+    {
+      "jobName": "dataflowJob",
+      "status": "CRASHED",
+      "description": "",
+      "cron": "0/5 * * * * ?",
+      "instanceCount": 0,
+      "shardingTotalCount": 3
+    },
+    {
+      "jobName": "simpleJob",
+      "status": "CRASHED",
+      "description": "测试",
+      "cron": "0/5 * * * * ?",
+      "instanceCount": 0,
+      "shardingTotalCount": 3
+    }
+  ]
+}
