@@ -50,6 +50,10 @@ public class Student {
         System.out.println(collect);
 //        list.stream().forEach(o-> System.out.println(o));
 
+        //1.获取list中单列集合
+        List<Integer> ageList = list.stream().map(Student::getAge).collect(Collectors.toList());
+        System.out.println(ageList);
+
 
         Map<String, String> map = new ConcurrentHashMap<String, String>();
         map.put("a", "aa");
