@@ -100,6 +100,17 @@
             <artifactId>dynamic-datasource-spring-boot-starter</artifactId>
             <version>3.3.2</version>
         </dependency>
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
+            <version>4.5.13</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.github.icecooly</groupId>
+            <artifactId>FastHttpClient</artifactId>
+            <version>1.7</version>
+        </dependency>
 
 
         <!-- https://mvnrepository.com/artifact/org.quartz-scheduler/quartz -->
