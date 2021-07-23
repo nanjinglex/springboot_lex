@@ -18,3 +18,7 @@ spring:
         #以上会配置一个默认库master，一个组slave下有两个子库slave_1,slave_2
 lex:
   a: lex1111
+
+
+test:
+  list: aaa,bbb,ccc

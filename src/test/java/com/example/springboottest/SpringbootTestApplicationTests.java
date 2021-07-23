@@ -7,6 +7,7 @@ import com.example.springboottest.util.HttpClientUtil;
 import io.itit.itf.okhttp.FastHttpClient;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.jdbc.core.JdbcTemplate;
 
@@ -24,6 +25,19 @@ class SpringbootTestApplicationTests {
 
     @Autowired
     private MongoTestDao mongoTestDao;
+
+//配置test.list不存在会报错
+    @Value("#{'${test.list}'.split(',')}")
+    private List<String> testList;
+
+    //配置test.list不存在会给一个默认值,
+    @Value("#{'${test.list:}'.split(',')}")
+    private List<String> testList1;
+
+//最终版
+    @Value("#{'${test.list:}'.empty ? null : '${test.list:}'.split(',')}")
+    private List<String> testList2;
+
 
 
     @Test
@@ -114,6 +128,14 @@ class SpringbootTestApplicationTests {
         }
 
 
+
+
+
+    }
+
+    @Test
+    public void valueTest(){
+        testList.stream().forEach(System.out::println);
 
     }
 
