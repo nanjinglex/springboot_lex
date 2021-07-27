@@ -78,9 +78,9 @@ class SpringbootTestApplicationTests {
     public void insert() {
         List<Object[]> list = new ArrayList<>();
 
-        for (int i = 0; i < 50; i++) {
+        for (int i = 0; i < 1000000; i++) {
             //name age sex
-            String[] s = {"张三"+i,i+"","男"};
+            String[] s = {i+"张三",20+"","男"};
             list.add(new Object[]{s[0],s[1],s[2]});
         }
 
@@ -89,6 +89,7 @@ class SpringbootTestApplicationTests {
         //执行批量插入操作
         String sql = "INSERT INTO `student`(`name`,`age`,`sex`) VALUES (?,?,?)";
         jdbcTemplate.batchUpdate(sql, list);
+
 
     }
 
