@@ -716,6 +716,10 @@ lex@ubuntu-vm-002:~/data/app/kafka_2.13-2.8.0/bin$
   718  jps
   719  pstree -pu
   720  kill -9 123456
+  
+  #ubuntu 查看CPU核心数
+  #这个命令的结果是: 机器的cpu核数
+    nproc
 
 ```
 
