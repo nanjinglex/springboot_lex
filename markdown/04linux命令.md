@@ -1119,4 +1119,8 @@ https://blog.csdn.net/wireless911/article/details/88989620
   800  history
 
 ```
+```
+#查看机器运行时间
+backend@tgbigdata_dev_3:~$ uptime
+18:12:47 up 61 days,  6:47,  2 users,  load average: 0.04, 0.03, 0.05```
 

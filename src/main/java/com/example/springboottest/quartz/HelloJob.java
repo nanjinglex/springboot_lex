@@ -6,6 +6,7 @@ import org.quartz.*;
 import org.quartz.impl.StdSchedulerFactory;
 
 import java.time.LocalDateTime;
+import java.util.HashMap;
 
 /**
  * @author lex
@@ -39,7 +40,13 @@ public class HelloJob implements Job {
         Scheduler scheduler = null;
         try {
             scheduler = StdSchedulerFactory.getDefaultScheduler();
-            scheduler.getContext().put("skey", "svalue");
+//            scheduler.getContext().put("skey", "svalue");
+
+            HashMap<String, String> objectObjectHashMap = new HashMap<>();
+            objectObjectHashMap.put("skey", "svalue");
+            objectObjectHashMap.put("skey1", "svalue1");
+
+            scheduler.getContext().putAll(objectObjectHashMap);
 
 
             //创建一个Trigger
