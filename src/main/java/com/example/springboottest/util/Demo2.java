@@ -13,4 +13,18 @@ import lombok.Data;
 public class Demo2 {
     int id;
     String name;
+
+    public static void main(String[] args) {
+        new Thread(()->System.out.println("nihao")).start();
+    System.out.println(Runtime.getRuntime().availableProcessors());
+
+try {
+    int a =8/0;
+}catch (Exception e){
+    System.err.println("exception:"+e.getMessage());
+}
+
+        System.out.println("over");
+
+    }
 }
