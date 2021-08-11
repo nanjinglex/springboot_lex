@@ -1122,5 +1122,10 @@ https://blog.csdn.net/wireless911/article/details/88989620
 ```
 #查看机器运行时间
 backend@tgbigdata_dev_3:~$ uptime
-18:12:47 up 61 days,  6:47,  2 users,  load average: 0.04, 0.03, 0.05```
+18:12:47 up 61 days,  6:47,  2 users,  load average: 0.04, 0.03, 0.05
 
+
+#下载远程jar包
+wget https://repo1.maven.org/maven2/org/apache/flink/flink-connector-jdbc_2.12/1.12.0/flink-connector-jdbc_2.12-1.12.0.jar
+
+```
