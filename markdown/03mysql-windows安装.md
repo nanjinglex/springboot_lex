@@ -23,6 +23,13 @@ D:\software\mysql-5.7.32-winx64.zip
 ```
 alter user 'root'@'localhost' identified by '123456';
 ```
+解压主目录下D:\software\mysql-5.7.32-winx64可添加my.ini进行配置，配置完重启mysql服务：
+管理员打开cmd：
+cmd下执行
+
+net stop mysql
+
+net start mysql
 
 
 
