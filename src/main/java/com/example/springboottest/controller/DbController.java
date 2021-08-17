@@ -8,6 +8,9 @@ import java.util.Map.Entry;
 
 import com.example.springboottest.pojo.Foo;
 
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiImplicitParam;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -17,8 +20,9 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+@Api(tags = "DbController模块")
 @RestController
-@RequestMapping("/mydb")
+//@RequestMapping("/mydb")
 public class DbController {
 
     // 缓存
@@ -27,6 +31,8 @@ public class DbController {
     @Autowired
     private JdbcTemplate jdbcTemplate;
 
+    @ApiImplicitParam(name = "name",value = "姓名",required = true)
+    @ApiOperation(value = "getUsers")
     @RequestMapping("/getUsers")
     public List<Map<String, Object>> getDbType(){
 
