@@ -1129,3 +1129,8 @@ backend@tgbigdata_dev_3:~$ uptime
 wget https://repo1.maven.org/maven2/org/apache/flink/flink-connector-jdbc_2.12/1.12.0/flink-connector-jdbc_2.12-1.12.0.jar
 
 ```
+#disk
+df
+df -h
+sudo du -sh /* |grep G
+sudo du -sh /home/* |grep G

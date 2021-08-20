@@ -24,8 +24,8 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 @Configuration
 @EnableSwagger2
-@EnableSwaggerBootstrapUi
-@Import(BeanValidatorPluginsConfiguration.class)
+//@EnableSwaggerBootstrapUi
+//@Import(BeanValidatorPluginsConfiguration.class)
 public class Knife4jConfiguration {
 
     @Bean(value = "defaultApi2")
@@ -42,7 +42,7 @@ public class Knife4jConfiguration {
                 .groupName("2.X版本")
                 .select()
                 //这里指定Controller扫描包路径
-                .apis(RequestHandlerSelectors.basePackage("com.github.xiaoymin.knife4j.controller"))
+                .apis(RequestHandlerSelectors.basePackage("com.example.springboottest.controller"))
                 .paths(PathSelectors.any())
                 .build();
         return docket;
