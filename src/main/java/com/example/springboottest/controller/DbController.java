@@ -16,6 +16,7 @@ import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.util.StringUtils;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -33,7 +34,7 @@ public class DbController {
 
     @ApiImplicitParam(name = "name",value = "姓名",required = true)
     @ApiOperation(value = "getUsers")
-    @RequestMapping("/getUsers")
+    @GetMapping("/getUsers")
     public List<Map<String, Object>> getDbType(){
 
         List<Map<String, Object>> users = (List<Map<String, Object>>) cache.get("users");
@@ -59,7 +60,7 @@ public class DbController {
         }
         return users;
     }
-    @RequestMapping("/getFoos")
+    @GetMapping("/getFoos")
     public List<Foo> getFoos(){
         // 查询数据的SQL语句
         String sql = "SELECT * FROM foo;";
