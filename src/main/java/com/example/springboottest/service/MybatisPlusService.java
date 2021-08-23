@@ -9,5 +9,5 @@ package com.example.springboottest.service;
  */
 public interface MybatisPlusService {
 
-    void deleteById(String id);
+    void deleteById(String id) throws Exception;
 }

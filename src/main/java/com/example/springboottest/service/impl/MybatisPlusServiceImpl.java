@@ -5,6 +5,8 @@ import com.example.springboottest.service.MybatisPlusService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
 
 /**
  * @author lex
@@ -21,9 +23,26 @@ public class MybatisPlusServiceImpl implements MybatisPlusService {
     @Autowired
     private UserMapper userMapper;
 
+//    @Autowired
+//    private MybatisPlusServiceImpl mybatisPlusServiceImpl;
 
     @Override
-    public void deleteById(String id) {
+    @Transactional(rollbackFor = Exception.class)
+    public void deleteById(String id) throws Exception {
+        try {
+            userMapper.deleteById(id);
+            int a = 8/0;
+            userMapper.deleteById(Integer.valueOf(id)-1);
+        }catch (Exception e){
+            throw new Exception("删除错误");
+//            e.printStackTrace();
+        }
+
+//        this.deleteById(id,"");
+    }
+
+    @Transactional(propagation = Propagation.REQUIRES_NEW)
+    public void deleteById(String id,String qq) {
         userMapper.deleteById(id);
         int a = 8/0;
         userMapper.deleteById(Integer.valueOf(id)-1);
