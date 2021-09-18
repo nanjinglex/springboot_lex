@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
  * @Description TODO
  * @createTime 2021年08月09日 10:19:00
  */
-@Service
+@Service("A")
 public class SvcA implements Svc {
 
     @Override

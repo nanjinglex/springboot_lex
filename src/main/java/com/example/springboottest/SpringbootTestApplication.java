@@ -36,8 +36,11 @@ public class SpringbootTestApplication  {
                         "Local: \t\thttp://localhost:{}\n\t" +
                         "External: \thttp://{}:{}\n\t"+
                         "Doc: \thttp://{}:{}/doc.html\n"+
+                        "Doc: \thttp://{}:{}/swagger-ui.html#\n"+
                         "----------------------------------------------------------",
                 env.getProperty("spring.application.name"),
+                env.getProperty("server.port"),
+                InetAddress.getLocalHost().getHostAddress(),
                 env.getProperty("server.port"),
                 InetAddress.getLocalHost().getHostAddress(),
                 env.getProperty("server.port"),
