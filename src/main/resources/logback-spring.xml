@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--debug默认为false,当为true为打印logback内部日志-->
+<configuration debug="false">
+
+    <!-- 应用名称 -->
+    <property name="APP_NAME" value="springbootLEX"/>
+    <!--日志文件的保存路径,首先查找系统属性-Dlog.dir,如果存在就使用其；否则，在当前目录下创建名为logs目录做日志存放的目录 -->
+    <property name="LOG_HOME" value="${log.dir:-logs}/${APP_NAME}"/>
+<!--    <property name="LOG_HOME" value="${log.dir:-d:/logs}/${APP_NAME}"/>-->
+
+
+    <!-- 文件日志输出格式 -->
+    <property name="FILE_ENCODER_PATTERN"
+              value="%d{yyyy-MM-dd HH:mm:ss.SSS} [%-5level] [%thread] %logger{80} - %msg%n"/>
+    <!-- 控制台日志输出格式 -->
+    <property name="CONSOLE_ENCODER_PATTERN"
+              value="%yellow(%d{yyyy-MM-dd HH:mm:ss.SSS}) %highlight([%-5level]) %blue([%thread]) %cyan(%logger{80}) - %msg%n"/>
+    <!--编码格式-->
+    <property name="CHARSET" value="UTF-8"/>
+
+    <contextName>${APP_NAME}</contextName>
+
+    <!-- 控制台日志：输出全部日志到控制台 -->
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <pattern>${CONSOLE_ENCODER_PATTERN}</pattern>
+            <charset>${CHARSET}</charset>
+        </encoder>
+    </appender>
+
+    <!-- 文件日志：输出全部日志到文件 -->
+    <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${LOG_HOME}/output.%d{yyyy-MM-dd}.log</fileNamePattern>
+            <!--日志文件输出的文件名,可设置文件类型为gz,开启文件压缩，结合timeBasedFileNamingAndTriggeringPolicy使用-->
+            <!--<fileNamePattern>${LOG_HOME}/output.%d{yyyy-MM-dd}.%i.log.gz</fileNamePattern>-->
+            <!--日志文件保留天数-->
+            <maxHistory>30</maxHistory>
+            <!--按大小分割同一天的-->
+            <!--<timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                <maxFileSize>10MB</maxFileSize>
+            </timeBasedFileNamingAndTriggeringPolicy>-->
+        </rollingPolicy>
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <pattern>${FILE_ENCODER_PATTERN}</pattern>
+            <charset>${CHARSET}</charset>
+        </encoder>
+    </appender>
+
+    <!-- 错误日志：用于将错误日志输出到独立文件 -->
+    <appender name="ERROR_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${LOG_HOME}/error.%d{yyyy-MM-dd}.log</fileNamePattern>
+            <!-- <fileNamePattern>${LOG_HOME}/error.%d{yyyy-MM-dd}.%i.log.gz</fileNamePattern>-->
+            <!--日志文件保留天数-->
+            <maxHistory>30</maxHistory>
+            <!--按大小分割同一天的-->
+            <!--<timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                <maxFileSize>10MB</maxFileSize>
+            </timeBasedFileNamingAndTriggeringPolicy>-->
+        </rollingPolicy>
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <pattern>${FILE_ENCODER_PATTERN}</pattern>
+            <charset>${CHARSET}</charset>
+        </encoder>
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>WARN</level>
+        </filter>
+    </appender>
+
+    <!-- 数据比对日志 -->
+    <appender name="DATA_COMPARE_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${LOG_HOME}/controller.%d{yyyy-MM-dd}.log</fileNamePattern>
+            <!-- <fileNamePattern>${LOG_HOME}/datacompare.%d{yyyy-MM-dd}.%i.log.gz</fileNamePattern>-->
+            <!--日志文件保留天数-->
+            <maxHistory>30</maxHistory>
+            <!--按大小分割同一天的-->
+            <!--<timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                <maxFileSize>10MB</maxFileSize>
+            </timeBasedFileNamingAndTriggeringPolicy>-->
+        </rollingPolicy>
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <pattern>${FILE_ENCODER_PATTERN}</pattern>
+            <charset>${CHARSET}</charset>
+        </encoder>
+    </appender>
+    <!--com.example.springboottest.controller为包全路径，level="info"-->
+    <logger name="com.example.springboottest.controller" level="info" addtivity="true">
+        <appender-ref ref="DATA_COMPARE_FILE"/>
+    </logger>
+
+    <root>
+        <level value="info"/>
+        <appender-ref ref="STDOUT"/>
+        <appender-ref ref="FILE"/>
+        <appender-ref ref="ERROR_FILE"/>
+    </root>
+</configuration>

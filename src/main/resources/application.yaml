@@ -5,16 +5,26 @@ spring:
       strict: false #严格匹配数据源,默认false. true未匹配到指定数据源时抛异常,false使用默认数据源
       datasource:
         master:
-          url: jdbc:mysql://127.0.0.1:3306/elastic_job_demo?serverTimezone=GMT%2B8
+          url: jdbc:mysql://127.0.0.1:3306/elastic_job_demo?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf-8&useSSL=false
           username: root
           password: 123456
           driver-class-name: com.mysql.jdbc.Driver # 3.2.0开始支持SPI可省略此配置
         slave_1:
-          url: jdbc:mysql://192.168.72.48:3306/tungee_bigdata?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8&useSSL=false
-          username: tungee_bigdata
+          url: jdbc:mysql://127.0.0.1:3306/tungee_bigdata?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8&useSSL=false
+          username: root
           password: 123456
           driver-class-name: com.mysql.jdbc.Driver
         #......省略
         #以上会配置一个默认库master，一个组slave下有两个子库slave_1,slave_2
+
+  redis:
+    database: 0
+    host: 127.0.0.1
+    port: 6379
+    password: 123456
 lex:
   a: lex1111
+
+
+test:
+  list: aaa,bbb,ccc

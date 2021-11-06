@@ -8,6 +8,7 @@ import lombok.NoArgsConstructor;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.stream.Collectors;
 
@@ -50,6 +51,10 @@ public class Student {
         System.out.println(collect);
 //        list.stream().forEach(o-> System.out.println(o));
 
+        //1.获取list中单列集合
+        List<Integer> ageList = list.stream().map(Student::getAge).collect(Collectors.toList());
+        System.out.println(ageList);
+
 
         Map<String, String> map = new ConcurrentHashMap<String, String>();
         map.put("a", "aa");
@@ -57,6 +62,20 @@ public class Student {
         map.put("c", "cc");
         map.remove("b");
         map.entrySet().forEach(o -> System.out.println(o.getKey() + ":" + o.getValue()));
+
+
+        Optional<Student> opt = Optional.ofNullable(new Student());
+
+        Student student = Optional.ofNullable(new Student()).orElse(new Student(19, "张三", "beijing"));
+        System.out.println(student.getAdress());
+        String result = Optional.ofNullable(new Student(19, "张三", "beijing"))
+                .map(c -> c.getAdress())
+                .orElse("default");
+
+        Optional<Object> o = Optional.ofNullable(null);
+        System.out.println(o.get());
+
+        System.out.println(opt.isPresent());
 
 
     }
