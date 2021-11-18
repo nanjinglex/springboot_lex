@@ -1,0 +1,21 @@
+package com.example.springboottest.runoob.designpattern.proxypattern;
+
+/**
+ * @author lex
+ * @version 1.0.0
+ * @ClassName ProxyPatternDemo.java
+ * @Description TODO
+ * @createTime 2021年08月17日 17:04:00
+ */
+public class ProxyPatternDemo {
+
+    public static void main(String[] args) {
+        Image image = new ProxyImage("test_10mb.jpg");
+
+        // 图像将从磁盘加载
+        image.display();
+        System.out.println("");
+        // 图像不需要从磁盘加载
+        image.display();
+    }
+}
