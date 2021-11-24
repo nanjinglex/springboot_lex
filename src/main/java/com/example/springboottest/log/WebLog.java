@@ -1,5 +1,6 @@
 package com.example.springboottest.log;
 
+import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -11,6 +12,7 @@ import lombok.ToString;
 @Getter
 @Setter
 @ToString
+@Data
 public class WebLog {
     /**
      * 操作描述

@@ -1138,7 +1138,8 @@ sudo du -sh /* |grep G
 sudo du -sh /home/* |grep G
 ```
 
-```aidl
+```
+aidl
 #find
 find / -name mongo
 
