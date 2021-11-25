@@ -6,9 +6,7 @@
 
 Git commit 选择要提交的文件 ，然后选择commit and push
 
-![image-20211106111556697](C:\Users\admin、\AppData\Roaming\Typora\typora-user-images\image-20211106111556697.png)
-
-
+![](https://raw.githubusercontent.com/nanjinglex/markdownPic/main/20211125200442.png)
 
 点击push，默认push到远程dev分支
 
@@ -18,15 +16,15 @@ push成功后，
 
 ，github上面看到提交记录
 
-![image-20211106112357907](C:\Users\admin、\AppData\Roaming\Typora\typora-user-images\image-20211106112357907.png)
+![image-20211106112357907](https://raw.githubusercontent.com/nanjinglex/markdownPic/main/markdownpicimage-20211106112357907.png)
 
-![image-20211106112446963](C:\Users\admin、\AppData\Roaming\Typora\typora-user-images\image-20211106112446963.png)
+![image-20211106112446963](https://raw.githubusercontent.com/nanjinglex/markdownPic/main/markdownpic/image-20211106112446963.png)
 
 
 
 在git log面板里面可以看到push的记录
 
-![image-20211106111843749](C:\Users\admin、\AppData\Roaming\Typora\typora-user-images\image-20211106111843749.png)
+![image-20211106111843749](https://raw.githubusercontent.com/nanjinglex/markdownPic/main/markdownpic/image-20211106111843749.png)
 
 
 
@@ -34,15 +32,15 @@ push成功后，
 
 2.切换到master分支
 
-![image-20211106112542119](C:\Users\admin、\AppData\Roaming\Typora\typora-user-images\image-20211106112542119.png)
+![image-20211106112542119](https://raw.githubusercontent.com/nanjinglex/markdownPic/main/markdownpic/image-20211106112542119.png)
 
 
 
 git log面板中 cherry-pick dev分支刚刚push记录（右击dev合并main测试3，点击cherr-Pick 或者 选中dev合并main测试3，点击上面的樱桃）
 
-![image-20211106112805197](C:\Users\admin、\AppData\Roaming\Typora\typora-user-images\image-20211106112805197.png)
+![image-20211106112805197](https://raw.githubusercontent.com/nanjinglex/markdownPic/main/markdownpic/image-20211106112805197.png)
 
-![image-20211106113026210](C:\Users\admin、\AppData\Roaming\Typora\typora-user-images\image-20211106113026210.png)
+![image-20211106113026210](https://raw.githubusercontent.com/nanjinglex/markdownPic/main/markdownpic/image-20211106113026210.png)
 
 
 
@@ -50,35 +48,35 @@ git log面板中 cherry-pick dev分支刚刚push记录（右击dev合并main测�
 
 可以看到记录
 
-![image-20211106113435562](C:\Users\admin、\AppData\Roaming\Typora\typora-user-images\image-20211106113435562.png)
+![image-20211106113435562](https://raw.githubusercontent.com/nanjinglex/markdownPic/main/markdownpic/image-20211106113435562.png)
 
 接下来进行push操作
 
 点击下图的push选项
 
-![image-20211106113224496](C:\Users\admin、\AppData\Roaming\Typora\typora-user-images\image-20211106113224496.png)
+![image-20211106113224496](https://raw.githubusercontent.com/nanjinglex/markdownPic/main/markdownpic/image-20211106113224496.png)
 
 或者
 
-![image-20211106113457527](C:\Users\admin、\AppData\Roaming\Typora\typora-user-images\image-20211106113457527.png)
+![image-20211106113457527](https://raw.githubusercontent.com/nanjinglex/markdownPic/main/markdownpic/image-20211106113457527.png)
 
 
 
 会进入push操作
 
-![image-20211106113521464](C:\Users\admin、\AppData\Roaming\Typora\typora-user-images\image-20211106113521464.png)
+![image-20211106113521464](https://raw.githubusercontent.com/nanjinglex/markdownPic/main/markdownpic/image-20211106113521464.png)
 
 
 
 push成功后
 
-![image-20211106113721289](C:\Users\admin、\AppData\Roaming\Typora\typora-user-images\image-20211106113721289.png)
+![image-20211106113721289](https://raw.githubusercontent.com/nanjinglex/markdownPic/main/markdownpic/image-20211106113721289.png)
 
  看到github
 
-![image-20211106113847910](C:\Users\admin、\AppData\Roaming\Typora\typora-user-images\image-20211106113847910.png)
+![image-20211106113847910](https://raw.githubusercontent.com/nanjinglex/markdownPic/main/markdownpic/image-20211106113847910.png)
 
-![image-20211106113907571](C:\Users\admin、\AppData\Roaming\Typora\typora-user-images\image-20211106113907571.png)
+![image-20211106113907571](https://raw.githubusercontent.com/nanjinglex/markdownPic/main/markdownpic/image-20211106113907571.png)
 
 ![RUNOOB 图标](http://static.runoob.com/images/runoob-logo.png)
 
@@ -94,7 +92,7 @@ push成功后
 
 未添加到git的文件显示为红色如图，新增到git中的会变成绿色，文件修改会变为蓝色
 
-![image-20211106140442639](C:\Users\admin、\AppData\Roaming\Typora\typora-user-images\image-20211106140442639.png)
+![image-20211106140442639](https://raw.githubusercontent.com/nanjinglex/markdownPic/main/markdownpic/image-20211106140442639.png)
 
 接下来进行 git commit到本地，然后push到源端
 
@@ -102,17 +100,17 @@ push成功后
 
 ### 2.2误操作git add了不需要提交的文件
 
-![image-20211106140705080](C:\Users\admin、\AppData\Roaming\Typora\typora-user-images\image-20211106140705080.png)
+![image-20211106140705080](https://raw.githubusercontent.com/nanjinglex/markdownPic/main/markdownpic/image-20211106140705080.png)
 
-![image-20211106140753163](C:\Users\admin、\AppData\Roaming\Typora\typora-user-images\image-20211106140753163.png)
+![image-20211106140753163](https://raw.githubusercontent.com/nanjinglex/markdownPic/main/markdownpic/image-20211106140753163.png)
 
 
 
 进行撤回
 
-![image-20211106140853514](C:\Users\admin、\AppData\Roaming\Typora\typora-user-images\image-20211106140853514.png)
+![image-20211106140853514](https://raw.githubusercontent.com/nanjinglex/markdownPic/main/markdownpic/image-20211106140853514.png)
 
-![image-20211106140905511](C:\Users\admin、\AppData\Roaming\Typora\typora-user-images\image-20211106140905511.png)
+![image-20211106140905511](https://raw.githubusercontent.com/nanjinglex/markdownPic/main/markdownpic/image-20211106140905511.png)
 
 
 
@@ -120,7 +118,7 @@ push成功后
 
 撤销后：
 
-![image-20211106141223545](C:\Users\admin、\AppData\Roaming\Typora\typora-user-images\image-20211106141223545.png)
+![image-20211106141223545](https://raw.githubusercontent.com/nanjinglex/markdownPic/main/markdownpic/image-20211106141223545.png)
 
 
 
@@ -132,19 +130,19 @@ push成功后
 
 比如我们开发了很多代码
 
-![image-20211106161704326](C:\Users\admin、\AppData\Roaming\Typora\typora-user-images\image-20211106161704326.png)
+![image-20211106161704326](https://raw.githubusercontent.com/nanjinglex/markdownPic/main/markdownpic/image-20211106161704326.png)
 
 右击项目选择Git --stash changes
 
-![image-20211106161227728](C:\Users\admin、\AppData\Roaming\Typora\typora-user-images\image-20211106161227728.png)
+![image-20211106161227728](https://raw.githubusercontent.com/nanjinglex/markdownPic/main/markdownpic/image-20211106161227728.png)
 
-![image-20211106161345179](C:\Users\admin、\AppData\Roaming\Typora\typora-user-images\image-20211106161345179.png)
+![image-20211106161345179](https://raw.githubusercontent.com/nanjinglex/markdownPic/main/markdownpic/image-20211106161345179.png)
 
 创建完，stash后，此时我们之前写的都会呗暂存起来，此时的项目为干净的项目，可立马进行新的开发
 
 如图
 
-![image-20211106161817186](C:\Users\admin、\AppData\Roaming\Typora\typora-user-images\image-20211106161817186.png)
+![image-20211106161817186](https://raw.githubusercontent.com/nanjinglex/markdownPic/main/markdownpic/image-20211106161817186.png)
 
 
 
@@ -154,10 +152,10 @@ push成功后
 
 右击项目 git --
 
-![image-20211106161918457](C:\Users\admin、\AppData\Roaming\Typora\typora-user-images\image-20211106161918457.png)
+![image-20211106161918457](https://raw.githubusercontent.com/nanjinglex/markdownPic/main/markdownpic/image-20211106161918457.png)
 
 
 
-![image-20211106161951958](C:\Users\admin、\AppData\Roaming\Typora\typora-user-images\image-20211106161951958.png)
+![image-20211106161951958](https://raw.githubusercontent.com/nanjinglex/markdownPic/main/markdownpic/image-20211106161951958.png)
 
 选择我们想要恢复的change，apply stash即可恢复。恢复前可以先View 看看变化，不需要的暂存也可以Drop。
