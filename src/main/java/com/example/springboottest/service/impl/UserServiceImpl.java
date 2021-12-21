@@ -36,5 +36,12 @@ public class UserServiceImpl implements UserService {
     public List selectByCondition() {
         return jdbcTemplate.queryForList("select * from user ");
     }
+
+
+    @Override
+    @DS("#key")
+    public List getBySpel(String key) {
+        return jdbcTemplate.queryForList("select * from user ");
+    }
 }
 
