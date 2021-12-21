@@ -2,10 +2,13 @@ package com.example.springboottest.springboot2;
 
 import org.apache.log4j.helpers.LogLog;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
+import org.springframework.boot.web.servlet.filter.OrderedCharacterEncodingFilter;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 import org.springframework.context.annotation.ImportResource;
+import org.springframework.web.filter.CharacterEncodingFilter;
 
 /**
  * @author lex
@@ -41,6 +44,15 @@ public class MyCongfig {
     public String catName(){
         return new String("miaomiao");
     }
+
+
+
+
+//    @Bean("myCharacterEncodingFilter")
+//    public CharacterEncodingFilter characterEncodingFilter() {
+//        CharacterEncodingFilter filter = new OrderedCharacterEncodingFilter();
+//        return filter;
+//    }
 
 
 }

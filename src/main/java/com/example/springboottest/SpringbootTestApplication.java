@@ -6,11 +6,14 @@ import com.example.springboottest.springboot2.MyCongfig;
 import lombok.extern.slf4j.Slf4j;
 
 import org.apache.log4j.helpers.LogLog;
+import org.aspectj.weaver.Advice;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.web.servlet.WebMvcProperties;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.core.env.Environment;
+import org.springframework.web.filter.CharacterEncodingFilter;
 
 import java.net.InetAddress;
 import java.net.UnknownHostException;
@@ -65,6 +68,17 @@ public class SpringbootTestApplication {
 
         //@ImportResource("classpath:beans.xml")
         System.out.println("是否包含bean haha:"+run.containsBean("haha"));
+
+
+        System.out.println(run.getBeanNamesForType(Advice.class).length);
+
+        String[] names = run.getBeanNamesForType(WebMvcProperties.class);
+        System.out.println(names.length);
+
+        String[] filter = run.getBeanNamesForType(CharacterEncodingFilter.class);
+        Arrays.stream(filter).forEach(System.out::println);
+
+
 
 
 
