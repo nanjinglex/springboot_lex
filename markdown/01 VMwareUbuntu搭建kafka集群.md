@@ -16,6 +16,8 @@
 | 腾讯软件源     | https://mirrors.tencent.com/         |
 | 搜狐镜像       | http://mirrors.sohu.com/             |
 
+
+
 ![image-20210512210820568](C:\Users\admin、\AppData\Roaming\Typora\typora-user-images\image-20210512210820568.png)
 
 
@@ -26,27 +28,27 @@ https://repo.huaweicloud.com/ubuntu-releases/18.04/
 
 
 
-![image-20210512210408884](C:\Users\admin、\AppData\Roaming\Typora\typora-user-images\image-20210512210408884.png)
+![image-20210512210408884](https://raw.githubusercontent.com/nanjinglex/markdownPic/main/markdownpic/image-20210512210408884.png)
 
 
 
 ### 2.2创建
 
-![](C:\Users\admin、\AppData\Roaming\Typora\typora-user-images\image-20210512210100558.png)
+![](https://raw.githubusercontent.com/nanjinglex/markdownPic/main/markdownpic/image-20210512210100558.png)
 
-![image-20210512210209393](C:\Users\admin、\AppData\Roaming\Typora\typora-user-images\image-20210512210209393.png)
-
-
-
-![image-20210512211436284](C:\Users\admin、\AppData\Roaming\Typora\typora-user-images\image-20210512211436284.png)
+![image-20210512210209393](https://raw.githubusercontent.com/nanjinglex/markdownPic/main/markdownpic/image-20210512210209393.png)
 
 
 
-![image-20210512211613124](C:\Users\admin、\AppData\Roaming\Typora\typora-user-images\image-20210512211613124.png)
+![image-20210512211436284](https://raw.githubusercontent.com/nanjinglex/markdownPic/main/markdownpic/image-20210512211436284.png)
 
-![image-20210512211635421](C:\Users\admin、\AppData\Roaming\Typora\typora-user-images\image-20210512211635421.png)
 
-![image-20210512211722337](C:\Users\admin、\AppData\Roaming\Typora\typora-user-images\image-20210512211722337.png)
+
+![image-20210512211613124](https://raw.githubusercontent.com/nanjinglex/markdownPic/main/markdownpic/image-20210512211613124.png)
+
+![image-20210512211635421](https://raw.githubusercontent.com/nanjinglex/markdownPic/main/markdownpic/image-20210512211635421.png)
+
+![image-20210512211722337](https://raw.githubusercontent.com/nanjinglex/markdownPic/main/markdownpic/image-20210512211722337.png)
 
 
 
@@ -113,25 +115,25 @@ export PATH=.:$JAVA_HOME/bin:$JRE_HOME/bin:$PATH
 
 java -version    --测试
 
-![image-20210513114804233](C:\Users\admin、\AppData\Roaming\Typora\typora-user-images\image-20210513114804233.png)
+![image-20210513114804233](https://raw.githubusercontent.com/nanjinglex/markdownPic/main/markdownpic/image-20210513114804233.png)
 
 #### 
 
 
 
-![image-20210513102406025](C:\Users\admin、\AppData\Roaming\Typora\typora-user-images\image-20210513102406025.png)
+![image-20210513102406025](https://raw.githubusercontent.com/nanjinglex/markdownPic/main/markdownpic/image-20210513102406025.png)
 
 ## 5.Ubuntu配置静态ip
 
 ### 5.1修改地址
 
-![image-20210513150251379](C:\Users\admin、\AppData\Roaming\Typora\typora-user-images\image-20210513150251379.png)
+![image-20210513150251379](https://raw.githubusercontent.com/nanjinglex/markdownPic/main/markdownpic/image-20210513150251379.png)
 
 
 
-![image-20210513150920317](C:\Users\admin、\AppData\Roaming\Typora\typora-user-images\image-20210513150920317.png)
+![image-20210513150920317](https://raw.githubusercontent.com/nanjinglex/markdownPic/main/markdownpic/image-20210513150920317.png)
 
-![image-20210513150431147](C:\Users\admin、\AppData\Roaming\Typora\typora-user-images\image-20210513150431147.png)
+![image-20210513150431147](https://raw.githubusercontent.com/nanjinglex/markdownPic/main/markdownpic/image-20210513150431147.png)
 
 
 
@@ -147,7 +149,7 @@ java -version    --测试
 
 ### 5.3验证
 
-![image-20210513152810454](C:\Users\admin、\AppData\Roaming\Typora\typora-user-images\image-20210513152810454.png)
+![image-20210513152810454](https://raw.githubusercontent.com/nanjinglex/markdownPic/main/markdownpic/image-20210513152810454.png)
 
 ## 6.Ubuntu修改主机名
 
@@ -226,21 +228,21 @@ bin目录下
 
 
 
-![image-20210514160715373](C:\Users\admin、\AppData\Roaming\Typora\typora-user-images\image-20210514160715373.png)
+![image-20210514160715373](https://raw.githubusercontent.com/nanjinglex/markdownPic/main/markdownpic/image-20210514160715373.png)
 
 
 
-![image-20210514160843656](C:\Users\admin、\AppData\Roaming\Typora\typora-user-images\image-20210514160843656.png)
+![image-20210514160843656](https://raw.githubusercontent.com/nanjinglex/markdownPic/main/markdownpic/image-20210514160843656.png)
 
 
 
-![image-20210514161507700](C:\Users\admin、\AppData\Roaming\Typora\typora-user-images\image-20210514161507700.png)
+![image-20210514161507700](https://raw.githubusercontent.com/nanjinglex/markdownPic/main/markdownpic/image-20210514161507700.png)
 
 日志查看
 
 
 
-![image-20210514161314186](C:\Users\admin、\AppData\Roaming\Typora\typora-user-images\image-20210514161314186.png)
+![image-20210514161314186](https://raw.githubusercontent.com/nanjinglex/markdownPic/main/markdownpic/image-20210514161314186.png)
 
 
 
@@ -442,15 +444,15 @@ Topic:huxing2    PartitionCount:2    ReplicationFactor:3    Configs:
 
 ## 11.克隆
 
-![image-20210512205821780](C:\Users\admin、\AppData\Roaming\Typora\typora-user-images\image-20210512205821780.png)
+![image-20210512205821780](https://raw.githubusercontent.com/nanjinglex/markdownPic/main/markdownpic/image-20210512205821780.png)
 
-![image-20210512205721612](C:\Users\admin、\AppData\Roaming\Typora\typora-user-images\image-20210512205721612.png)
+![image-20210512205721612](https://raw.githubusercontent.com/nanjinglex/markdownPic/main/markdownpic/image-20210512205721612.png)
 
-![image-20210512205644167](C:\Users\admin、\AppData\Roaming\Typora\typora-user-images\image-20210512205644167.png)
+![image-20210512205644167](https://raw.githubusercontent.com/nanjinglex/markdownPic/main/markdownpic/image-20210512205644167.png)
 
-![image-20210512205603555](C:\Users\admin、\AppData\Roaming\Typora\typora-user-images\image-20210512205603555.png)
+![image-20210512205603555](https://raw.githubusercontent.com/nanjinglex/markdownPic/main/markdownpic/image-20210512205603555.png)
 
-![image-20210512205525077](C:\Users\admin、\AppData\Roaming\Typora\typora-user-images\image-20210512205525077.png)
+![image-20210512205525077](https://raw.githubusercontent.com/nanjinglex/markdownPic/main/markdownpic/image-20210512205525077.png)
 
 
 
@@ -458,7 +460,7 @@ Topic:huxing2    PartitionCount:2    ReplicationFactor:3    Configs:
 
 克隆之后，新生成的要更新mac地址
 
-![image-20210513201545649](C:\Users\admin、\AppData\Roaming\Typora\typora-user-images\image-20210513201545649.png)
+![image-20210513201545649](https://raw.githubusercontent.com/nanjinglex/markdownPic/main/markdownpic/image-20210513201545649.png)
 
 
 
@@ -590,7 +592,7 @@ lex@ubuntu-vm-002:~/data/app/kafka_2.13-2.8.0$
 Note: Kafka version is "-" or JMX Port is "-1" maybe kafka broker jmxport disable.
 ```
 
-![image-20210514175742363](C:\Users\admin、\AppData\Roaming\Typora\typora-user-images\image-20210514175742363.png)
+![image-20210514175742363](https://raw.githubusercontent.com/nanjinglex/markdownPic/main/markdownpic/image-20210514175742363.png)
 
 
 
@@ -626,7 +628,7 @@ zoo.cfg配置文件添加：
 
 改后
 
-![image-20210514181214930](C:\Users\admin、\AppData\Roaming\Typora\typora-user-images\image-20210514181214930.png)
+![image-20210514181214930](https://raw.githubusercontent.com/nanjinglex/markdownPic/main/markdownpic/image-20210514181214930.png)
 
 ### 12.4经验小结
 
@@ -644,7 +646,7 @@ https://blog.csdn.net/qq_19524879/article/details/82848797
 
 启动成功
 
-![image-20210520105421365](C:\Users\admin、\AppData\Roaming\Typora\typora-user-images\image-20210520105421365.png)
+![image-20210520105421365](https://raw.githubusercontent.com/nanjinglex/markdownPic/main/markdownpic/image-20210520105421365.png)
 
 ### 13.2.官网
 
