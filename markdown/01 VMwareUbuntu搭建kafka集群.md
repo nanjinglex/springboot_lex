@@ -18,11 +18,13 @@
 
 
 
-![image-20210512210820568](C:\Users\admin、\AppData\Roaming\Typora\typora-user-images\image-20210512210820568.png)
+![image-20211223094209126](https://raw.githubusercontent.com/nanjinglex/markdownPic/main/markdownpic/image-20211223094209126.png)
 
 
 
-![image-20210512210909346](C:\Users\admin、\AppData\Roaming\Typora\typora-user-images\image-20210512210909346.png)
+之前用的18.04.5
+
+![image-20211223094334318](https://raw.githubusercontent.com/nanjinglex/markdownPic/main/markdownpic/image-20211223094334318.png)
 
 https://repo.huaweicloud.com/ubuntu-releases/18.04/
 
