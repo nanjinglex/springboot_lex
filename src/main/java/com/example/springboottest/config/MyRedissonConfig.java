@@ -19,7 +19,7 @@ public class MyRedissonConfig {
     @Bean
     public RedissonClient redissonClient() {
         Config config = new Config();
-        config.useSingleServer().setAddress("redis://127.0.0.1:6379");
+        config.useSingleServer().setAddress("redis://192.168.72.36:6379");
         config.useSingleServer().setPassword("123456");
         return Redisson.create(config);
     }
