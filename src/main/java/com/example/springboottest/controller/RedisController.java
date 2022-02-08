@@ -35,7 +35,7 @@ import java.util.concurrent.TimeUnit;
  * @Description TODO
  * @createTime 2021年08月11日 11:12:00
  */
-//@RestController
+@RestController
 @RequestMapping("/redis")
 @Slf4j
 public class RedisController {
