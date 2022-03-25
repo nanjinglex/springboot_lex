@@ -1162,3 +1162,10 @@ find / -name mongo
 查找系统中所有文件长度为 0 的普通文件，并列出它们的完整路径：
 
 # find / -type f -size 0 -exec ls -l {} \;
+
+#创建文件并写入 >覆盖  >>追加
+lex@ubuntu-vm-003:~/data$ touch a.txt
+lex@ubuntu-vm-003:~/data$ echo "asdf" >a.txt
+lex@ubuntu-vm-003:~/data$ cat a.txt
+asdf
+lex@ubuntu-vm-003:~/data$ 
