@@ -1136,6 +1136,78 @@ df
 df -h
 sudo du -sh /* |grep G
 sudo du -sh /home/* |grep G
+
+
+lex@ubuntu-vm-001:~$ du -sh ./data/
+5.7G	./data/
+lex@ubuntu-vm-001:~$ du -sh ./data/*
+312M	./data/apache-hive-3.1.2-bin
+266M	./data/apache-hive-3.1.2-bin.tar.gz
+38M	./data/apache-shardingsphere-elasticjob-3.0.0-SNAPSHOT-lite-ui-bin.tar.gz
+441M	./data/app
+510M	./data/flink-1.12.0
+319M	./data/flink-1.12.0-bin-scala_2.11.tgz
+979M	./data/flink-streaming-platform-web
+2.3G	./data/hadoop-3.1.3
+323M	./data/hadoop-3.1.3.tar.gz
+4.0K	./data/hive_tab2.txt
+
+
+lex@ubuntu-vm-001:~$ du -sh home/lex/data/*
+du: cannot access 'home/lex/data/*': No such file or directory
+lex@ubuntu-vm-001:~$ du -sh /home/lex/data/*
+312M	/home/lex/data/apache-hive-3.1.2-bin
+266M	/home/lex/data/apache-hive-3.1.2-bin.tar.gz
+38M	/home/lex/data/apache-shardingsphere-elasticjob-3.0.0-SNAPSHOT-lite-ui-bin.tar.gz
+441M	/home/lex/data/app
+510M	/home/lex/data/flink-1.12.0
+319M	/home/lex/data/flink-1.12.0-bin-scala_2.11.tgz
+979M	/home/lex/data/flink-streaming-platform-web
+2.3G	/home/lex/data/hadoop-3.1.3
+323M	/home/lex/data/hadoop-3.1.3.tar.gz
+
+
+lex@ubuntu-vm-001:~$ du -sh ./data/* |grep G
+2.3G	./data/hadoop-3.1.3
+lex@ubuntu-vm-001:~$ 
+
+
+ 
+ 
+
+#删除hdfs数据
+lex@ubuntu-vm-001:~$ du -sh ./data/* |grep G
+2.3G	./data/hadoop-3.1.3
+lex@ubuntu-vm-001:~$ hadoop fs -rm -r /user/lex/.flink/*
+Deleted /user/lex/.flink/application_1646971298746_0014
+Deleted /user/lex/.flink/application_1646981461474_0002
+Deleted /user/lex/.flink/application_1646981461474_0004
+lex@ubuntu-vm-001:~$ du -sh ./data/* |grep G
+1.2G	./data/hadoop-3.1.3
+lex@ubuntu-vm-001:~$ hadoop fs -lsr /user
+lsr: DEPRECATED: Please use 'ls -R' instead.
+drwxr-xr-x   - lex supergroup          0 2022-04-02 01:04 /user/hive
+drwxr-xr-x   - lex supergroup          0 2022-04-08 02:21 /user/hive/warehouse
+drwxr-xr-x   - lex supergroup          0 2022-04-06 23:46 /user/hive/warehouse/mydb.db
+drwxr-xr-x   - lex supergroup          0 2022-04-07 22:41 /user/hive/warehouse/mydb.db/pokes
+-rw-r--r--   3 lex supergroup          7 2022-04-07 22:41 /user/hive/warehouse/mydb.db/pokes/000000_0
+-rw-r--r--   3 lex supergroup         22 2022-04-06 23:46 /user/hive/warehouse/mydb.db/pokes/hive_tab.txt
+drwxr-xr-x   - lex supergroup          0 2022-04-06 23:44 /user/hive/warehouse/pokes
+-rw-r--r--   3 lex supergroup         22 2022-04-06 23:44 /user/hive/warehouse/pokes/hivetest.txt
+drwxr-xr-x   - lex supergroup          0 2022-04-08 02:21 /user/hive/warehouse/testdb.db
+drwxr-xr-x   - lex supergroup          0 2022-04-06 23:47 /user/hive/warehouse/userdb.db
+drwxr-xr-x   - lex supergroup          0 2022-04-07 01:05 /user/hive/warehouse/userdb.db/invites
+drwxr-xr-x   - lex supergroup          0 2022-04-06 23:48 /user/hive/warehouse/userdb.db/invites/ds=2022-04-02
+-rw-r--r--   3 lex supergroup         22 2022-04-06 23:48 /user/hive/warehouse/userdb.db/invites/ds=2022-04-02/hive_tab.txt
+drwxr-xr-x   - lex supergroup          0 2022-04-07 01:05 /user/hive/warehouse/userdb.db/invites/ds=2022-04-03
+-rw-r--r--   3 lex supergroup         22 2022-04-07 01:05 /user/hive/warehouse/userdb.db/invites/ds=2022-04-03/hive_tab.txt
+drwx------   - lex supergroup          0 2022-03-10 22:45 /user/lex
+drwx------   - lex supergroup          0 2022-04-08 02:53 /user/lex/.flink
+drwxr-xr-x   - lex supergroup          0 2022-03-07 00:44 /user/lex/input_dir
+-rw-r--r--   3 lex supergroup        340 2022-03-07 00:44 /user/lex/input_dir/sample.txt
+lex@ubuntu-vm-001:~$ 
+
+
 ```
 
 ```
