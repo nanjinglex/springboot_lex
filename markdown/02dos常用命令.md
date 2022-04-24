@@ -1,6 +1,6 @@
 
 
-# doc常用命令
+# dos常用命令
 
 ## 1.查看端口占用
 
@@ -80,7 +80,7 @@ PicGo.exe                    18844 Console                    3     91,212 K
 
 ## 3.cmd杀掉进程
 
-```
+```bash
 taskkill /f /t /im nginx.exe
 
 
@@ -104,14 +104,24 @@ taskkill /pid {pid}
 telnet 127.0.0.1 80
 ```
 
+## 5.常用命令
 
-
-```
+```bash
 
 #查看ip
 ipconfig
 
-#查看历史
+#查看历史或者快捷鍵F7
 doskey  /history 
+
+#切换盘符（需要输入两条命令）
+C:\Users\admin、>cd d:\environment
+C:\Users\admin、>d:
+d:\environment>doskey  /history
+#或者
+C:\Windows\system32>d:
+D:\>cd d:\environment
+d:\environment>
+
 ```
 

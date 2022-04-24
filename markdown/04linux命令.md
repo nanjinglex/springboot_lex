@@ -1129,8 +1129,113 @@ backend@tgbigdata_dev_3:~$ uptime
 wget https://repo1.maven.org/maven2/org/apache/flink/flink-connector-jdbc_2.12/1.12.0/flink-connector-jdbc_2.12-1.12.0.jar
 
 ```
+
+```
 #disk
 df
 df -h
 sudo du -sh /* |grep G
 sudo du -sh /home/* |grep G
+
+
+lex@ubuntu-vm-001:~$ du -sh ./data/
+5.7G	./data/
+lex@ubuntu-vm-001:~$ du -sh ./data/*
+312M	./data/apache-hive-3.1.2-bin
+266M	./data/apache-hive-3.1.2-bin.tar.gz
+38M	./data/apache-shardingsphere-elasticjob-3.0.0-SNAPSHOT-lite-ui-bin.tar.gz
+441M	./data/app
+510M	./data/flink-1.12.0
+319M	./data/flink-1.12.0-bin-scala_2.11.tgz
+979M	./data/flink-streaming-platform-web
+2.3G	./data/hadoop-3.1.3
+323M	./data/hadoop-3.1.3.tar.gz
+4.0K	./data/hive_tab2.txt
+
+
+lex@ubuntu-vm-001:~$ du -sh home/lex/data/*
+du: cannot access 'home/lex/data/*': No such file or directory
+lex@ubuntu-vm-001:~$ du -sh /home/lex/data/*
+312M	/home/lex/data/apache-hive-3.1.2-bin
+266M	/home/lex/data/apache-hive-3.1.2-bin.tar.gz
+38M	/home/lex/data/apache-shardingsphere-elasticjob-3.0.0-SNAPSHOT-lite-ui-bin.tar.gz
+441M	/home/lex/data/app
+510M	/home/lex/data/flink-1.12.0
+319M	/home/lex/data/flink-1.12.0-bin-scala_2.11.tgz
+979M	/home/lex/data/flink-streaming-platform-web
+2.3G	/home/lex/data/hadoop-3.1.3
+323M	/home/lex/data/hadoop-3.1.3.tar.gz
+
+
+lex@ubuntu-vm-001:~$ du -sh ./data/* |grep G
+2.3G	./data/hadoop-3.1.3
+lex@ubuntu-vm-001:~$ 
+
+
+
+#删除hdfs数据
+lex@ubuntu-vm-001:~$ du -sh ./data/* |grep G
+2.3G	./data/hadoop-3.1.3
+lex@ubuntu-vm-001:~$ hadoop fs -rm -r /user/lex/.flink/*
+Deleted /user/lex/.flink/application_1646971298746_0014
+Deleted /user/lex/.flink/application_1646981461474_0002
+Deleted /user/lex/.flink/application_1646981461474_0004
+lex@ubuntu-vm-001:~$ du -sh ./data/* |grep G
+1.2G	./data/hadoop-3.1.3
+lex@ubuntu-vm-001:~$ hadoop fs -lsr /user
+lsr: DEPRECATED: Please use 'ls -R' instead.
+drwxr-xr-x   - lex supergroup          0 2022-04-02 01:04 /user/hive
+drwxr-xr-x   - lex supergroup          0 2022-04-08 02:21 /user/hive/warehouse
+drwxr-xr-x   - lex supergroup          0 2022-04-06 23:46 /user/hive/warehouse/mydb.db
+drwxr-xr-x   - lex supergroup          0 2022-04-07 22:41 /user/hive/warehouse/mydb.db/pokes
+-rw-r--r--   3 lex supergroup          7 2022-04-07 22:41 /user/hive/warehouse/mydb.db/pokes/000000_0
+-rw-r--r--   3 lex supergroup         22 2022-04-06 23:46 /user/hive/warehouse/mydb.db/pokes/hive_tab.txt
+drwxr-xr-x   - lex supergroup          0 2022-04-06 23:44 /user/hive/warehouse/pokes
+-rw-r--r--   3 lex supergroup         22 2022-04-06 23:44 /user/hive/warehouse/pokes/hivetest.txt
+drwxr-xr-x   - lex supergroup          0 2022-04-08 02:21 /user/hive/warehouse/testdb.db
+drwxr-xr-x   - lex supergroup          0 2022-04-06 23:47 /user/hive/warehouse/userdb.db
+drwxr-xr-x   - lex supergroup          0 2022-04-07 01:05 /user/hive/warehouse/userdb.db/invites
+drwxr-xr-x   - lex supergroup          0 2022-04-06 23:48 /user/hive/warehouse/userdb.db/invites/ds=2022-04-02
+-rw-r--r--   3 lex supergroup         22 2022-04-06 23:48 /user/hive/warehouse/userdb.db/invites/ds=2022-04-02/hive_tab.txt
+drwxr-xr-x   - lex supergroup          0 2022-04-07 01:05 /user/hive/warehouse/userdb.db/invites/ds=2022-04-03
+-rw-r--r--   3 lex supergroup         22 2022-04-07 01:05 /user/hive/warehouse/userdb.db/invites/ds=2022-04-03/hive_tab.txt
+drwx------   - lex supergroup          0 2022-03-10 22:45 /user/lex
+drwx------   - lex supergroup          0 2022-04-08 02:53 /user/lex/.flink
+drwxr-xr-x   - lex supergroup          0 2022-03-07 00:44 /user/lex/input_dir
+-rw-r--r--   3 lex supergroup        340 2022-03-07 00:44 /user/lex/input_dir/sample.txt
+lex@ubuntu-vm-001:~$ 
+
+
+```
+
+```
+aidl
+#find
+find / -name mongo
+
+```
+将当前目录及其子目录下所有文件后缀为 .c 的文件列出来:
+
+# find . -name "*.c"
+将当前目录及其子目录中的所有文件列出：
+
+# find . -type f
+将当前目录及其子目录下所有最近 20 天内更新过的文件列出:
+
+# find . -ctime -20
+查找 /var/log 目录中更改时间在 7 日以前的普通文件，并在删除之前询问它们：
+
+# find /var/log -type f -mtime +7 -ok rm {} \;
+查找当前目录中文件属主具有读、写权限，并且文件所属组的用户和其他用户具有读权限的文件：
+
+# find . -type f -perm 644 -exec ls -l {} \;
+查找系统中所有文件长度为 0 的普通文件，并列出它们的完整路径：
+
+# find / -type f -size 0 -exec ls -l {} \;
+
+#创建文件并写入 >覆盖  >>追加
+lex@ubuntu-vm-003:~/data$ touch a.txt
+lex@ubuntu-vm-003:~/data$ echo "asdf" >a.txt
+lex@ubuntu-vm-003:~/data$ cat a.txt
+asdf
+lex@ubuntu-vm-003:~/data$ 

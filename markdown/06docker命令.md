@@ -37,6 +37,8 @@ docker logs 32f
 
 docker logs -f -t --tail=200 c5e #最近200行开始
 
+docker logs 498c --tail 1000 #最近1000行
+
 
 
 
