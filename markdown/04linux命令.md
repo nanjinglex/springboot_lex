@@ -1172,8 +1172,6 @@ lex@ubuntu-vm-001:~$ du -sh ./data/* |grep G
 lex@ubuntu-vm-001:~$ 
 
 
- 
- 
 
 #删除hdfs数据
 lex@ubuntu-vm-001:~$ du -sh ./data/* |grep G
